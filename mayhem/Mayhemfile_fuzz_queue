@@ -1,0 +1,9 @@
+project: savantenvs/threadx
+target: fuzz_queue
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_queue/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_queue
+    libfuzzer: true
+    timeout: 5

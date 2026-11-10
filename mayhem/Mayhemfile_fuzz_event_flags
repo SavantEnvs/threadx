@@ -1,0 +1,9 @@
+project: savantenvs/threadx
+target: fuzz_event_flags
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_event_flags/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_event_flags
+    libfuzzer: true
+    timeout: 5
